@@ -61,9 +61,9 @@ const StorePage = () => {
                 Productos
               </button>
               
-              <button className="hidden sm:block text-sm font-medium text-gray-300 hover:text-purple-400 transition py-2 px-3 rounded-lg">
+              <Link href="/purchases" className="hidden sm:block text-sm font-medium text-gray-300 hover:text-purple-400 transition py-2 px-3 rounded-lg">
                 Mis Compras
-              </button>
+              </Link>
 
               {/* Botón Favoritos con Badge */}
               <Link href="/favorite" className="relative p-2.5 text-gray-400 hover:text-purple-400 transition rounded-xl hover:bg-[#1f1a3a]/50">
