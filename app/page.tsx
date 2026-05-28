@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import { useState } from 'react';
+import Link from 'next/link'
 
 const StorePage = () => {
   // Estado para simular productos en el carrito o favoritos
@@ -65,24 +66,24 @@ const StorePage = () => {
               </button>
 
               {/* Botón Favoritos con Badge */}
-              <button className="relative p-2.5 text-gray-400 hover:text-purple-400 transition rounded-xl hover:bg-[#1f1a3a]/50">
+              <Link href="/favorite" className="relative p-2.5 text-gray-400 hover:text-purple-400 transition rounded-xl hover:bg-[#1f1a3a]/50">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
                 <span className="absolute top-1 right-1 w-4 h-4 bg-purple-500 text-[10px] font-bold text-white rounded-full flex items-center justify-center shadow-[0_0_8px_rgba(168,85,247,0.6)]">
                   {favCount}
                 </span>
-              </button>
+              </Link>
 
               {/* Botón Carrito con Badge */}
-              <button className="relative p-2.5 text-gray-400 hover:text-purple-400 transition rounded-xl hover:bg-[#1f1a3a]/50">
+              <Link href="/cart" className="relative p-2.5 text-gray-400 hover:text-purple-400 transition rounded-xl hover:bg-[#1f1a3a]/50">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.625.625 0 11-1.25 0 .625.625 0 011.25 0zm7.5 0a.625.625 0 11-1.25 0 .625.625 0 011.25 0z" />
                 </svg>
                 <span className="absolute top-1 right-1 w-4 h-4 bg-indigo-500 text-[10px] font-bold text-white rounded-full flex items-center justify-center shadow-[0_0_8px_rgba(99,102,241,0.6)]">
                   {cartCount}
                 </span>
-              </button>
+              </Link>
 
               <div className="h-6 w-[1px] bg-gray-700/50 mx-1 hidden sm:block"></div>
 
